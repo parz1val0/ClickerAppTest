@@ -269,7 +269,7 @@ public class UserService {
     }
     public String generateReferralLink(String telegramId) {
         String uniqueLink = userRepository.findByTelegramId(telegramId).orElseThrow(()->new IllegalArgumentException("no such a user")).getUniqueReferalLink();
-        return "https://t.me/FootBall_clicker_bot?start=" + uniqueLink;
+        return "link" + uniqueLink;
     }
     public void updateBalanceDouble(String telegramId,Double balance){
         User user = userRepository.findByTelegramId(telegramId).orElse(null);
