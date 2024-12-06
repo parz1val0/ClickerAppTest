@@ -16,7 +16,7 @@ public class PromoService {
     private final PromoRepository promoRepository;
     private final PromoMapper promoMapper;
 
-    @Transactional
+    
     public boolean createPromo(PromoCodeDto promoCodeDto){
         Promo promo = promoMapper.fromDtoToPromo(promoCodeDto);
         promoRepository.save(promo);
